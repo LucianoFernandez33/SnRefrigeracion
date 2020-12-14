@@ -46,11 +46,12 @@ body{
                          "galeria galeria galeria";
     justify-content: center;
     justify-items: center;
+    margin-top: 5em;
 }
 
 .portada__imagen {
         width: 100%;
-        margin: 10px;
+        margin: 0.4em;
         grid-area: portada;
 }
 .portada__imagen img{
@@ -122,10 +123,14 @@ body{
             height: 100%;
             grid-area: contacto;
             display: grid;
-            font-size: 12px;
+            font-size: 0.7em;
             line-height: 2;
             align-items:center;
             padding: 5px;
+            justify-content: center;
+}
+#contact ul{
+    list-style: none;
 }
 .correo{
     font-size: 1.1em;
@@ -133,7 +138,7 @@ body{
 }
 .correo:hover{
     color: $color_fuente_hover;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .RedesSociales{
@@ -159,12 +164,8 @@ body{
     padding: 5px;
     text-align: center;
     line-height: 1.5;
-    font-size: 0.7rem;
+    font-size: 0.7em;
     width: 100%;
-}
-.modalpagos img{
-    width: 20%;
-    margin-top: 5px;
 }
 .copyright {
     display: grid;
@@ -174,6 +175,28 @@ body{
     justify-content: center;
     align-items: end;
     grid-area: copy;
+}
+@media (max-width:768px) {
+    .foot {
+        background-color: black;
+        text-transform: uppercase;
+        color: $color_fuente_principal;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "redes"
+                            "copy";
+        justify-content: center;
+        justify-items: center;
+}
+
+    #contact{
+        display: none;
+    }
+    .modalpagos{
+        display: none;
+    }
 }
  /*-----------------------------------  PAGE CONTACTO ------------------------------------------   */
 h2{
