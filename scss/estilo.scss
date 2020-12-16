@@ -40,7 +40,7 @@ body{
 .portada{
     display: grid;
     grid-template-columns: 30% 30% 30% ;
-    grid-template-rows: 1fr 15% .5fr;
+    
     grid-template-areas: "portada portada portada" 
                          "texto texto texto"
                          "galeria galeria galeria";
@@ -56,10 +56,10 @@ body{
 }
 .portada__imagen img{
             width: 100%;
-             border-radius: 5%;
+             border-radius: 3%;
             }
 .portada__quienesSomos{
-            width:50%;
+            width: 90%;
             text-align: center;
             letter-spacing: 1px;
             padding: 2px;
@@ -80,18 +80,7 @@ body{
     width: 30%;
     height: 100%;
     padding: 5px;
-    border-radius: 10%;
-    transition: all 1s;
-    
-}
-.portada__miniGaleria .img1:hover{
-    @include tamaño_hover;
-}
-.portada__miniGaleria .img2:hover{
-    @include tamaño_hover;
-}
-.portada__miniGaleria .img3:hover{
-    @include tamaño_hover;
+    border-radius: 10%;   
 }
 .subir{
     display: flex;
@@ -100,6 +89,34 @@ body{
     }
 .subir img{
     align-items: flex-end;
+}
+
+@media (max-width:768px) {  
+    body{
+        margin: 0px;
+        padding: 0px;
+        padding-left: 0px;
+    }
+    .portada{
+        display: grid;
+        grid-template-columns: 100% ;
+        
+        grid-template-areas: "portada portada portada" 
+                             "texto texto texto"
+                             "galeria galeria galeria";
+        justify-content: center;
+        justify-items: center;
+        margin-top: 5em;
+    }
+    .portada__miniGaleria{
+        grid-area: galeria;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .portada__miniGaleria .img1, .portada__miniGaleria .img2, .portada__miniGaleria .img3{
+        width: 70%;
+    }
 }
 /*-----------------------------------------------   AREA FOOTER   -----------------------------------------  */
 
