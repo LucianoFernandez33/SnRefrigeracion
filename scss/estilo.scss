@@ -74,12 +74,12 @@ body{
 .portada__miniGaleria{
     grid-area: galeria;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 .portada__miniGaleria .img1, .portada__miniGaleria .img2, .portada__miniGaleria .img3{
-    width: 30%;
-    height: 100%;
-    padding: 5px;
+    width: 100%;
+    margin: 5px;
     border-radius: 10%;   
 }
 .subir{
@@ -95,7 +95,6 @@ body{
     body{
         margin: 0px;
         padding: 0px;
-        padding-left: 0px;
     }
     .portada{
         display: grid;
@@ -106,8 +105,14 @@ body{
                              "galeria galeria galeria";
         justify-content: center;
         justify-items: center;
-        margin-top: 5em;
+        margin: 0px !important;
+        padding: 0px !important;  
     }
+    .portada__imagen {
+        width: 100%;
+        margin-top: 7em;
+        grid-area: portada;
+    }   
     .portada__miniGaleria{
         grid-area: galeria;
         display: flex;
@@ -115,7 +120,8 @@ body{
         align-items: center;
     }
     .portada__miniGaleria .img1, .portada__miniGaleria .img2, .portada__miniGaleria .img3{
-        width: 70%;
+        width: 90%;
+        align-items: center;
     }
 }
 /*-----------------------------------------------   AREA FOOTER   -----------------------------------------  */
@@ -225,11 +231,12 @@ h2{
    width: 100%;
    display: flex;
    flex-direction: row; 
-   justify-content: space-evenly;
+   justify-content: center;
    align-items: center;
 }
 .formulario{
-    width: 40%;
+    width: 100%;
+    margin-top: 5em;
     }
 
 .TitCont {
@@ -257,7 +264,7 @@ fieldset label{
 }
 .input {
     border-radius: 15px;
-    width: 250px;
+    width: 50%;
     height: 25px;
     transition: all 1s;
 }
@@ -284,8 +291,11 @@ textarea:focus{
     background-color: $color_fuente_hover;
     color: $color_fuente_principal;
 }
+.cuadroDeTexto{
+    width: 100%;
+}
 .ifr{
-    width: 35%;
+    width: 100%;
     height: 500px;
     overflow: hidden;
 }
@@ -294,6 +304,15 @@ textarea:focus{
     height: 100%;   
     border-radius: 10%;
 }
+@media (max-width:768px){
+    .formulario{
+        width: 100%;
+        margin-top: 10em;
+        }
+    .ifr{
+        display: none;
+    }
+}
 
                                 /*  PAGE SERVICIOS  */
 @mixin tamaño($widht,){
@@ -301,6 +320,7 @@ textarea:focus{
 }
 /*CAROUSEL*/
 .carousel-item{
+    margin-top: 6em;
     height: 100vh;
     
 }
@@ -322,12 +342,13 @@ textarea:focus{
 .card{
     background-color: white;
     margin-top: 50px;
+    text-align: center
 }
 .card-1 {
    .card-imagen{
        @include tamaño(250px);
        padding: 25px;
-       margin: auto;
+       margin: 0px;
    } 
 }
 .card-2 {
@@ -343,6 +364,12 @@ textarea:focus{
         padding: 15px;
         margin: auto;
     } 
+ }
+ .serviciosMargin {
+     margin-right: 0px !important;
+     padding-right: 0px !important;
+     margin-left: 0px !important;
+     padding-left: 0px !important;
  }
 /*--------------------------------- PAGE NOSOTROS -----------------------------------------*/
 
@@ -384,7 +411,8 @@ textarea:focus{
     display: flex;
     justify-content: center;
     color: rgb(27, 18, 148);
-    margin: 15px 0px 30px; 
+    margin: 7rem 0px 30px; 
+    text-align: center;
 }
 .parrImg{
     color: $color_fuente_principal;
@@ -396,7 +424,8 @@ textarea:focus{
     }
     .titGaleria{
         color: $color_fuente_principal;
-        font-size: 1em;
+        font-size: 1.5em;
+        margin: 7rem 0px 10px;
         text-align: center;
     }
     .galeria img{
@@ -404,5 +433,18 @@ textarea:focus{
         display: flex;
         align-items: center;
         justify-content: center
+    }
+    .parrImg{
+        color: $color_fuente_principal;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .parrafoGaleria{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        color: $color_fuente_principal;
+        font-size: 0.7em;
+        text-align: center;
     }
 }

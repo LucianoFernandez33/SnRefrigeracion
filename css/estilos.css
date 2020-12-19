@@ -60,12 +60,12 @@ body {
 .portada__miniGaleria {
   grid-area: galeria;
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: center;
+  align-items: center; }
 
 .portada__miniGaleria .img1, .portada__miniGaleria .img2, .portada__miniGaleria .img3 {
-  width: 30%;
-  height: 100%;
-  padding: 5px;
+  width: 100%;
+  margin: 5px;
   border-radius: 10%; }
 
 .subir {
@@ -79,22 +79,27 @@ body {
 @media (max-width: 768px) {
   body {
     margin: 0px;
-    padding: 0px;
-    padding-left: 0px; }
+    padding: 0px; }
   .portada {
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas: "portada portada portada"  "texto texto texto" "galeria galeria galeria";
     justify-content: center;
     justify-items: center;
-    margin-top: 5em; }
+    margin: 0px !important;
+    padding: 0px !important; }
+  .portada__imagen {
+    width: 100%;
+    margin-top: 7em;
+    grid-area: portada; }
   .portada__miniGaleria {
     grid-area: galeria;
     display: flex;
     flex-direction: column-reverse;
     align-items: center; }
   .portada__miniGaleria .img1, .portada__miniGaleria .img2, .portada__miniGaleria .img3 {
-    width: 70%; } }
+    width: 90%;
+    align-items: center; } }
 
 /*-----------------------------------------------   AREA FOOTER   -----------------------------------------  */
 .foot {
@@ -194,11 +199,12 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center; }
 
 .formulario {
-  width: 40%; }
+  width: 100%;
+  margin-top: 5em; }
 
 .TitCont {
   color: white;
@@ -224,7 +230,7 @@ fieldset label {
 
 .input {
   border-radius: 15px;
-  width: 250px;
+  width: 50%;
   height: 25px;
   transition: all 1s; }
 
@@ -250,8 +256,11 @@ textarea:focus {
   background-color: #F6AB26;
   color: white; }
 
+.cuadroDeTexto {
+  width: 100%; }
+
 .ifr {
-  width: 35%;
+  width: 100%;
   height: 500px;
   overflow: hidden; }
 
@@ -260,9 +269,17 @@ textarea:focus {
   height: 100%;
   border-radius: 10%; }
 
+@media (max-width: 768px) {
+  .formulario {
+    width: 100%;
+    margin-top: 10em; }
+  .ifr {
+    display: none; } }
+
 /*  PAGE SERVICIOS  */
 /*CAROUSEL*/
 .carousel-item {
+  margin-top: 6em;
   height: 100vh; }
 
 .slide1 {
@@ -282,12 +299,13 @@ textarea:focus {
 
 .card {
   background-color: white;
-  margin-top: 50px; }
+  margin-top: 50px;
+  text-align: center; }
 
 .card-1 .card-imagen {
   width: 250px;
   padding: 25px;
-  margin: auto; }
+  margin: 0px; }
 
 .card-2 .card-imagen {
   width: 180px;
@@ -298,6 +316,12 @@ textarea:focus {
   width: 170px;
   padding: 15px;
   margin: auto; }
+
+.serviciosMargin {
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+  margin-left: 0px !important;
+  padding-left: 0px !important; }
 
 /*--------------------------------- PAGE NOSOTROS -----------------------------------------*/
 .imgNos img {
@@ -333,7 +357,8 @@ textarea:focus {
   display: flex;
   justify-content: center;
   color: #1b1294;
-  margin: 15px 0px 30px; }
+  margin: 7rem 0px 30px;
+  text-align: center; }
 
 .parrImg {
   color: white;
@@ -344,10 +369,22 @@ textarea:focus {
     background-color: #0e21cf; }
   .titGaleria {
     color: white;
-    font-size: 1em;
+    font-size: 1.5em;
+    margin: 7rem 0px 10px;
     text-align: center; }
   .galeria img {
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center; } }
+    justify-content: center; }
+  .parrImg {
+    color: white;
+    text-align: center;
+    font-size: 0.8em; }
+  .parrafoGaleria {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 0.7em;
+    text-align: center; } }
