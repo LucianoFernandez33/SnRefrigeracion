@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -146,11 +147,15 @@ body {
   align-items: end; }
 
 .RedesSociales img {
-  width: 10%;
+  width: 100%;
   margin: 10px; }
 
-.RedesSociales img:hover {
+.RedesSociales a:hover {
   width: 12%; }
+
+.RedesSociales a {
+  width: 10%;
+  margin-right: 12px; }
 
 .modalpagos {
   display: flex;
@@ -196,7 +201,7 @@ h2 {
   font-size: 3rem; }
 
 .contForm {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -243,7 +248,7 @@ fieldset label {
   font-size: 18px; }
 
 .input:focus {
-  width: 300px;
+  width: 30vh;
   background-color: #F6AB26;
   color: white; }
 
@@ -273,8 +278,16 @@ textarea:focus {
   .formulario {
     width: 100%;
     margin-top: 10em; }
+  .contForm {
+    width: 90%;
+    display: grid; }
   .ifr {
-    display: none; } }
+    display: none; }
+  .input {
+    border-radius: 10px;
+    width: 100%;
+    height: 25px;
+    transition: all 1s; } }
 
 /*  PAGE SERVICIOS  */
 /*CAROUSEL*/
@@ -337,6 +350,19 @@ textarea:focus {
   color: white;
   font-size: 1em; }
 
+@media (max-width: 768px) {
+  .carousel-item {
+    margin-top: 7em;
+    height: 65vh; }
+  .imgNos img {
+    height: 44vh; }
+  .carouselEespecificaciones {
+    height: 70vh; }
+  .textoNosotros {
+    width: 100%;
+    font-size: 0.7em;
+    font-family: 'Comfortaa', cursive; } }
+
 /*---------------------------------- PAGE GALERIA ------------------------------------------ */
 .galeria img {
   width: 100%;
@@ -344,7 +370,7 @@ textarea:focus {
   border-radius: 10%; }
 
 .galeria img:hover {
-  width: 110%; }
+  width: 105%; }
 
 .parrafoGaleria {
   display: flex;
